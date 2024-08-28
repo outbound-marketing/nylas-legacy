@@ -18,7 +18,7 @@
 
 * Drop support for Ruby 2.2 and 2.3: they have reached end-of-life
 * Add support for Ruby 2.5 and 2.6
-* Add `scopes` argument to `Nylas::API#authenticate` for
+* Add `scopes` argument to `NylasLegacy::API#authenticate` for
   [selective sync](https://docs.nylas.com/docs/how-to-use-selective-sync)
 * Add `Account#revoke_all`
 * Add X-Nylas-Client-Id header for HTTP requests
@@ -75,7 +75,7 @@
 
 * Deprecate the tags API
 * Remove the archive!/unarchive! methods
-* Expose `starred`, `unread`, `has_attachments` in Nylas::Thread
+* Expose `starred`, `unread`, `has_attachments` in NylasLegacy::Thread
 
 [full changelog](https://github.com/nylas/nylas-ruby/compare/v1.2.1...v1.3.0)
 

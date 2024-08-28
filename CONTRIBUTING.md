@@ -37,7 +37,7 @@ curl -u nylas https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; chm
 #### Pushing to Rubygems
 
 Once the tests all pass, you're ready to release a new version!
-Update `lib/nylas/version.rb` to the next planned release version then run:
+Update `lib/nylas-legacy/version.rb` to the next planned release version then run:
 
 ```
 bin/test

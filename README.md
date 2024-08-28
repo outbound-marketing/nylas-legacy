@@ -46,10 +46,10 @@ Examples are located in the [examples](./examples) directory. Examples in plain 
 The Nylas API allows you to set various scopes during the authentication process
 in order to use the [Selective Sync](https://docs.nylas.com/docs/how-to-use-selective-sync)
 feature. Currently, these scopes are `email`, `calendar`, and `contacts`.
-You can pass an array of scopes to `Nylas::API#authenticate`, like this:
+You can pass an array of scopes to `NylasLegacy::API#authenticate`, like this:
 
 ```ruby
-api = Nylas::API.new()
+api = NylasLegacy::API.new()
 api.authenticate(
     name: 'fake',
     email_address: 'fake@example.com',
@@ -87,14 +87,14 @@ The [Nylas Sync Engine](http://github.com/nylas/sync-engine) is open source, and
 
 ```ruby
 require 'nylas'
-nylas = Nylas::API.new(api_server: 'http://localhost:5555/')
+nylas = NylasLegacy::API.new(api_server: 'http://localhost:5555/')
 
 # Get the id of the first account -- this is the access token we're
 # going to use.
 account_id = nylas.accounts.first.id
 
 # Display the body of the first message for the first account
-nylas = Nylas::API.new(access_token: account_id, api_server: 'http://localhost:5555/')
+nylas = NylasLegacy::API.new(access_token: account_id, api_server: 'http://localhost:5555/')
 puts nylas.messages.first.body
 ```
 
